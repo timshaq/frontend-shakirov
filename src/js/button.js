@@ -16,3 +16,12 @@ $(function(){
 
 	
 })
+	window.onresize = function() {
+		if (window.innerWidth >= 1024) {
+			$('.navigation__img_menu-burger').css({'display': 'none'});
+			$('.navigation__img_menu-close').css({'display': 'none'});
+			$('.header__navigation-mobile').css({'display': 'none'});
+		} else {
+			$('.navigation__img_menu-burger').css({'display': 'block'});
+		}
+	}

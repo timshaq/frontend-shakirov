@@ -36,6 +36,7 @@ $cr_2: #ff8f5a
 				margin-bottom: 15px
 			&:hover
 				color: $cr_1
+				text-decoration: underline #ff2f96
 	& .contacts
 		display: flex
 		flex-direction: column
@@ -111,6 +112,7 @@ $cr_2: #ff8f5a
 			margin-top: 24px
 			height: 150px
 		& .button_call
+			font-size: 17px
 			width: 250px
 			@media (max-width: 1024px)
 				width: 248px
@@ -129,6 +131,10 @@ $cr_2: #ff8f5a
 			margin: 32px 0 0 0
 		@media (max-width: 783px)
 			margin: 50px 0 0
+		& a
+			opacity: 0.6
+			&:hover
+				opacity: 1.0
 		& .link_vk
 			background-position: left top
 			margin: 0 15px 0 0

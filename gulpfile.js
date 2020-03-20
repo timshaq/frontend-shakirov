@@ -10,9 +10,7 @@ const sourcemaps = require('gulp-sourcemaps');
 const sass = require('gulp-sass');
 
 const jsFiles = [
-    './src/js/popup.js',
-    './src/js/button.js',
-    './src/js/slider.js'
+    './src/js/*.js'
 ]
 
 function presass() {
