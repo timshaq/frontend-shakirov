@@ -109,16 +109,16 @@ $(function(){
 		$(".order-container").fadeOut(400, enableScroll);
 	})
 	// Order-project button — end
-})
 
 
-	$( document ).ready(function(){
-	  $( "#submit-informer" ).on('click',function(){
+
+
+	$( "#submit-informer" ).on('click',function(){
 	    var formData = $('.informer__form').serialize(); // создаем переменную, которая содержит закодированный набор элементов формы в виде строки
 	    console.log(formData)
 	    $.post( "mail-inform.php", formData, function( data ) { //  передаем и загружаем данные с сервера с помощью HTTP запроса методом POST
 	      alert('Ваша заявка отправлена!');
-	      $(".informer-container").fadeOut(400, enableScroll); // вставляем в элемент <div> данные, полученные от сервера
+	      $(".inform-container").fadeOut(400, enableScroll); // вставляем в элемент <div> данные, полученные от сервера
 	    })
 
 	  });
@@ -137,9 +137,14 @@ console.log(formData)
 console.log(formData)
 	    $.post( "mail.php", formData, function( data ) { //  передаем и загружаем данные с сервера с помощью HTTP запроса методом POST
 	      alert('Ваша заявка отправлена!');
-	      $(".caller-container").fadeOut(400, enableScroll); // вставляем в элемент <div> данные, полученные от сервера
+	      $(".call-container").fadeOut(400, enableScroll); // вставляем в элемент <div> данные, полученные от сервера
 	    })
 	  });
+})
 
 
-	});
+	// $( document ).ready(function(){
+	  
+
+
+	// });
