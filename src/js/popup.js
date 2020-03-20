@@ -113,15 +113,16 @@ $(function(){
 
 
 	$( document ).ready(function(){
-	  $( ".informer__form" ).submit(function(){
+	  $( "#submit-informer" ).on('click',function(){
 	    var formData = $( this ).serialize(); // создаем переменную, которая содержит закодированный набор элементов формы в виде строки
-
+	    console.log(formData)
 	    $.post( "mail-inform.php", formData, function( data ) { //  передаем и загружаем данные с сервера с помощью HTTP запроса методом POST
 	      alert('Ваша заявка отправлена!') // вставляем в элемент <div> данные, полученные от сервера
 	    })
+
 	  });
 
-	  $( ".orderer__form" ).submit(function(){
+	  $( ".orderer__form" ).on('click',function(){
 	    var formData = $( this ).serialize(); // создаем переменную, которая содержит закодированный набор элементов формы в виде строки
 
 	    $.post( "mail.php", formData, function( data ) { //  передаем и загружаем данные с сервера с помощью HTTP запроса методом POST
@@ -129,7 +130,7 @@ $(function(){
 	    })
 	  });
 
-	  $( ".caller__form" ).submit(function(){
+	  $( ".caller__form" ).on('click',function(){
 	    var formData = $( this ).serialize(); // создаем переменную, которая содержит закодированный набор элементов формы в виде строки
 
 	    $.post( "mail.php", formData, function( data ) { //  передаем и загружаем данные с сервера с помощью HTTP запроса методом POST
