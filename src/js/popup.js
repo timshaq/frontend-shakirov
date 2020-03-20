@@ -114,27 +114,30 @@ $(function(){
 
 	$( document ).ready(function(){
 	  $( "#submit-informer" ).on('click',function(){
-	    var formData = $( this ).serialize(); // создаем переменную, которая содержит закодированный набор элементов формы в виде строки
+	    var formData = $('.informer__form').serialize(); // создаем переменную, которая содержит закодированный набор элементов формы в виде строки
 	    console.log(formData)
 	    $.post( "mail-inform.php", formData, function( data ) { //  передаем и загружаем данные с сервера с помощью HTTP запроса методом POST
-	      alert('Ваша заявка отправлена!') // вставляем в элемент <div> данные, полученные от сервера
+	      alert('Ваша заявка отправлена!');
+	      $(".informer-container").fadeOut(400, enableScroll); // вставляем в элемент <div> данные, полученные от сервера
 	    })
 
 	  });
 
-	  $( ".orderer__form" ).on('click',function(){
-	    var formData = $( this ).serialize(); // создаем переменную, которая содержит закодированный набор элементов формы в виде строки
-
+	  $( "#submit-order" ).on('click',function(){
+	    var formData = $('.orderer__form').serialize(); // создаем переменную, которая содержит закодированный набор элементов формы в виде строки
+console.log(formData)
 	    $.post( "mail.php", formData, function( data ) { //  передаем и загружаем данные с сервера с помощью HTTP запроса методом POST
-	      alert('Ваша заявка отправлена!') // вставляем в элемент <div> данные, полученные от сервера
+	      alert('Ваша заявка отправлена!');
+	      $(".order-container").fadeOut(400, enableScroll); // вставляем в элемент <div> данные, полученные от сервера
 	    })
 	  });
 
-	  $( ".caller__form" ).on('click',function(){
-	    var formData = $( this ).serialize(); // создаем переменную, которая содержит закодированный набор элементов формы в виде строки
-
+	  $( "#submit-call" ).on('click',function(){
+	    var formData = $('.caller__form').serialize(); // создаем переменную, которая содержит закодированный набор элементов формы в виде строки
+console.log(formData)
 	    $.post( "mail.php", formData, function( data ) { //  передаем и загружаем данные с сервера с помощью HTTP запроса методом POST
-	      alert('Ваша заявка отправлена!') // вставляем в элемент <div> данные, полученные от сервера
+	      alert('Ваша заявка отправлена!');
+	      $(".caller-container").fadeOut(400, enableScroll); // вставляем в элемент <div> данные, полученные от сервера
 	    })
 	  });
 
