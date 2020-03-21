@@ -6,6 +6,7 @@ $('.examples__album').slick({
 		autoplaySpeed: 2000,
 		dots: false,
 		arrows: true,
+		//variableWidth: true,
 		responsive: [
 			{
 				breakpoint: 1367,
@@ -47,4 +48,4 @@ $('.examples__album').slick({
 				}
 			}
 		]
-	})
+	});

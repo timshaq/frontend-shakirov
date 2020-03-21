@@ -30,17 +30,24 @@ $cr_1: #ff2f96
 		@media (max-width: 320px)
 			padding-top: 0
 			margin-bottom: 40px
+	& .fixed-container
+		@media (max-width: 997px)
+			display: flex
+			justify-content: center
 	& .album
 		height: 350px
 		display: flex
 		position: relative
+		width: 97.1%
+		margin: 0 auto
 		@media (max-width: 1366px)
+			width: 370*2+30px
 			justify-content: center
 		@media (max-width: 1024px)
 			height: 408px
 			width: 948px
 		@media (max-width: 997px)
-			height: 400px
+			width: 456px
 		@media (max-width: 800px)
 			display: block
 			position: static
