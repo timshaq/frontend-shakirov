@@ -198,6 +198,14 @@
 }
 
 @media (max-width: 1024px) {
+.slick-dots {
+    left: 2%;
+}
+
+@media (max-width: 799px) {
+.slick-dots {
+    left: 3%;
+}
 .slick-dots li button:before {
     font-size: 170px;
     top: 237%;
