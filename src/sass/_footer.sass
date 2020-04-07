@@ -12,8 +12,6 @@ $cr_2: #ff8f5a
 			height: 450px
 			align-items: flex-start
 			flex-direction: column
-			justify-content: space-evenly
-		@media (max-width: 783px)
 			justify-content: flex-start
 	& .navigation
 		height: 87px
@@ -22,9 +20,10 @@ $cr_2: #ff8f5a
 		font-size: 18px
 		@media (max-width: 1024px)
 			height: 72px
-		@media (max-width: 783px)
-			height: 75px
+		@media (max-width: 997px)
 			font-size: 15px
+		@media (max-width: 800px)
+			height: 75px
 			margin-top: 46px
 		& a 
 			text-decoration: none
@@ -32,7 +31,7 @@ $cr_2: #ff8f5a
 			margin-bottom: 9px
 			@media (max-width: 1024px)
 				margin-bottom: 11px
-			@media (max-width: 783px)
+			@media (max-width: 800px)
 				margin-bottom: 15px
 			&:hover
 				color: $cr_1
@@ -47,16 +46,17 @@ $cr_2: #ff8f5a
 		@media (max-width: 1024px)
 			height: 76px
 			margin-left: 54px
-		@media (max-width: 783px)
-			margin-left: 0
+		@media (max-width: 997px)
 			font-size: 20px
+		@media (max-width: 800px)
+			margin-left: 0
 			margin-top: 51px
 			height: 71px
 		& .h4_tel
 			margin: 0
 			font-size: 25px
 			font-weight: 400
-			@media (max-width: 783px)
+			@media (max-width: 997px)
 				font-size: 20px
 		& .h4_mailto
 			margin: 0
@@ -64,7 +64,7 @@ $cr_2: #ff8f5a
 			font-weight: 400
 			@media (max-width: 1024px)
 				margin: 29px 0 0 0
-			@media (max-width: 783px)
+			@media (max-width: 997px)
 				font-size: 20px
 				margin: 0
 		& .link_tel:before 
@@ -79,7 +79,7 @@ $cr_2: #ff8f5a
 			@media (max-width: 1024px)
 				font-size: 23px
 				margin-right: 22px
-			@media (max-width: 783px)
+			@media (max-width: 997px)
 				font-size: 20px
 				margin-right: 18px
 		& .link_mailto:before
@@ -94,7 +94,7 @@ $cr_2: #ff8f5a
 			@media (max-width: 1024px)
 				font-size: 23px
 				margin-right: 27px
-			@media (max-width: 783px)
+			@media (max-width: 997px)
 				font-size: 20px
 				margin-right: 18px
 	& .social
@@ -108,7 +108,7 @@ $cr_2: #ff8f5a
 		@media (max-width: 1024px)
 			width: 248px
 			margin-top: 37px
-		@media (max-width: 783px)
+		@media (max-width: 800px)
 			margin-top: 24px
 			height: 150px
 		& .button_call
@@ -117,8 +117,6 @@ $cr_2: #ff8f5a
 			@media (max-width: 1024px)
 				width: 248px
 			@media (max-width: 800px)
-				display: none
-			@media (max-width: 783px)
 				display: block
 				width: 280px
 				background-color: #ff4e2e
@@ -129,7 +127,7 @@ $cr_2: #ff8f5a
 		margin-top: 32px
 		@media (max-width: 1024px)
 			margin: 32px 0 0 0
-		@media (max-width: 783px)
+		@media (max-width: 800px)
 			margin: 50px 0 0
 		& a
 			opacity: 0.6

@@ -45,6 +45,7 @@
         -ms-transform: translate3d(0, 0, 0);
          -o-transform: translate3d(0, 0, 0);
             transform: translate3d(0, 0, 0);
+            padding-left: 0.15%
 }
 
 .slick-track
@@ -125,3 +126,17 @@
     transform: translate3d(-235px, 0px, 0px);
 }
 }*/
+@media (max-width: 1366px) {
+
+.slick-slider .slick-list {
+    padding-left: 0.35%
+}
+
+}
+@media (max-width: 997px) {
+
+.slick-slider .slick-list {
+    padding-left: 0
+}
+
+}

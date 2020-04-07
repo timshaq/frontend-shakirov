@@ -1,4 +1,4 @@
-.call-container, .order-container, .inform-container 
+.call-container, .order-container, .inform-container
 	display: none
 	background-color: #00000060
 	width: 100%
@@ -7,7 +7,7 @@
 	top: 0
 	z-index: 2000
 
-.caller, .orderer, .informer 
+.caller, .orderer, .informer
 	width: 300px
 	height: 350px
 	border-radius: 60px 30px 15px
@@ -17,55 +17,56 @@
 	position: relative
 	align-self: center
 
-.caller img, .orderer img, .informer img 
+.caller img, .orderer img, .informer img
 	width: 20px
 	position: absolute
 	top: 20px
 	right: 20px
 	cursor: pointer
 
-.caller__h1, .orderer__h1, .informer__h1 
+.caller__h1, .orderer__h1, .informer__h1
 	width: 255px
 	margin: 0 auto
 	padding: 30px 0 10px 0
 	border-bottom: 1px solid #0009
 	text-align: center
 
-.caller__form, .orderer__form, .informer__form 
+.caller__form, .orderer__form, .informer__form
 	display: flex
 	flex-direction: column
 	justify-content: center
 	font-size: 18px
-	padding: 0 0 0 22px
+	margin: 0 auto
+	width: 258px
 	& span, small
 		padding: 0 0 0 20px
-.caller__form * 
+.caller__form *
 	width: 235px
 	margin: 10px 0 5px 0
 
-.orderer__form * 
+.orderer__form *
 	width: 235px
 	margin: 10px 0 5px 0
 
-.informer__form * 
+.informer__form *
 	width: 235px
 	margin: 10px 0 5px 0
 
-input[class^="caller__input"] 
+input[class^="caller__input"]
 	border: 1px solid gray
 	height: 32px
 	border-radius: 40px
 	padding: 0 0 0 20px
 	font-size: 16px
 
-input[class^="orderer__input"] 
+input[class^="orderer__input"]
 	border: 1px solid gray
 	height: 32px
 	border-radius: 40px
 	padding: 0 0 0 20px
 	font-size: 16px
 
-input[class^="informer__input"] 
+input[class^="informer__input"]
 	border: 1px solid gray
 	height: 32px
 	border-radius: 40px
@@ -82,5 +83,3 @@ input[class^="informer__input"]
 	color: white
 	background-color: #ff4e2e
 	margin: 20px auto 0 auto
-
-
