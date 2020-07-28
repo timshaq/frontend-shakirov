@@ -4,25 +4,11 @@ $(function(){
         $(".tel-mask").mask("+7 (999) 999-99-99");
     })
 
-	function disableScroll(){
-		var scrY = window.scrollY;
-		console.log(scrY)
-		// $('body').css({
-		// 		'position': 'fixed',
-		// 		'top': scrY,
-		// 		'width': '100%',
- 	// 			'height': '100%',
- 	// 			'overflow': 'hidden'
-
-		// 	})
+	function disableScroll () {
 		$('html').css('overflow', 'hidden');
 	};
 
-	function enableScroll(){
-		// $('body').css({
-		// 	'position': 'relative',
- 	// 		'overflow': 'auto'
-		// });
+	function enableScroll () {
 		$('html').css({'overflow-y': 'scroll', 'overflow-x': 'hidden'})
 	};
 
@@ -113,38 +99,47 @@ $(function(){
 
 
 
-	$( "#submit-informer" ).on('click',function(){
-	    var formData = $('.informer__form').serialize(); // создаем переменную, которая содержит закодированный набор элементов формы в виде строки
-	    console.log(formData)
-	    $.post( "mail-inform.php", formData, function( data ) { //  передаем и загружаем данные с сервера с помощью HTTP запроса методом POST
-	      alert('Ваша заявка отправлена!');
-	      $(".inform-container").fadeOut(400, enableScroll); // вставляем в элемент <div> данные, полученные от сервера
-	    })
+	$( "#submit-informer" ).on('click',function(ev){
+	      $().fadeOut(400, enableScroll);
 
 	  });
 
-	  $( "#submit-order" ).on('click',function(){
-	    var formData = $('.orderer__form').serialize(); // создаем переменную, которая содержит закодированный набор элементов формы в виде строки
-console.log(formData)
-	    $.post( "mail.php", formData, function( data ) { //  передаем и загружаем данные с сервера с помощью HTTP запроса методом POST
-	      alert('Ваша заявка отправлена!');
-	      $(".order-container").fadeOut(400, enableScroll); // вставляем в элемент <div> данные, полученные от сервера
-	    })
-	  });
+	var formNodeList = document.querySelectorAll('form');
+	var formList = Array.prototype.slice.call(formNodeList);
 
-	  $( "#submit-call" ).on('click',function(){
-	    var formData = $('.caller__form').serialize(); // создаем переменную, которая содержит закодированный набор элементов формы в виде строки
-console.log(formData)
-	    $.post( "mail.php", formData, function( data ) { //  передаем и загружаем данные с сервера с помощью HTTP запроса методом POST
-	      alert('Ваша заявка отправлена!');
-	      $(".call-container").fadeOut(400, enableScroll); // вставляем в элемент <div> данные, полученные от сервера
-	    })
-	  });
+	function getSendResult (res) {
+		console.log(res)
+		if (res != 'ok') {
+			alert('Ошибка отправки, попробуйте еще раз!')
+		} else {
+			alert('Ваша заявка отправлена!')
+			$('.call-container .order-container .inform-container').fadeOut(400, enableScroll)
+		}
+	}
+
+	formList.map(form => {
+		form.addEventListener('submit', function(ev) {
+			console.log('SUBMIT')
+			ev.preventDefault()
+			var sendBody = $(form).serialize()
+
+			console.log('sendBody')
+			console.log( sendBody )
+
+		    fetch("mail.php", { 
+		        method: "POST",
+		        body: sendBody,   
+		        headers:{"content-type": "application/x-www-form-urlencoded"} 
+		      })
+		    .then(res => {return res.text()})
+		    .then(text => {getSendResult(text)})
+
+		    
+
+		})
+		
+
+	})
+
+
 })
-
-
-	// $( document ).ready(function(){
-	  
-
-
-	// });
