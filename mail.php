@@ -16,9 +16,9 @@ $name = urldecode($name);
 $name = trim($name);
 
 $email = $_POST['user_email'];
-$email = htmlspecialchars($name);
-$email = urldecode($name);
-$email = trim($name);
+$email = htmlspecialchars($email);
+$email = urldecode($email);
+$email = trim($email);
 
 $to          = "timur53shakirov@mail.ru";
 $subject     = "Заявка с сайта";
@@ -26,14 +26,14 @@ $text        = $name;
 
 if ($tel) {
 
-$text       .= " ждёт звонка на номер";
+$text       .= " ждёт звонка на номер ";
 $text       .= $tel;
 
 }
 
 if ($email) {
 
-$text       .= " ждёт письма на мэйл";
+$text       .= " ждёт письма на мэйл ";
 $text       .= $email;
 
 }
